@@ -1,4 +1,5 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
@@ -20,7 +21,73 @@
 }
 
 body {
-  background: var(--background);
+  transition: all;
+  transition-duration: 300ms;
+  background: var(--background); 
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  
+} */
+
+
+@import "tailwindcss";
+
+body {
+  transition: all 0.3s ease;
+
+}
+
+/* Slim scrollbar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px; /* slim */
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent; /* no track */
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 80, 0.6); /* gray slim thumb */
+  border-radius: 9999px; /* fully rounded */
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(90, 100, 80, 0.8);
+}
+
+/* custom carousel slide */
+/* hide default scrollbar (optional) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* dot styles (fine-tune colors) */
+.carousel-dots { display: flex; gap: 0.5rem;}
+.carousel-dot {
+  width: 8px; height: 8px; border-radius: 9999px;
+  background: rgba(107,114,128,0.45); /* gray-500/45 */
+  border: none;
+  cursor: pointer;
+}
+.carousel-dot[aria-current="true"] {
+  background: rgb(17,24,39); /* gray-900 active */
+}
+
+/* ensure scroll-snap child alignment */
+.carousel > * { scroll-snap-align: start; }
+
+
+/* carousel animation */
+.slide {
+  transform: scale(1);
+  transition: transform 0.5s ease; /* only animates when changed */
+}
+.slide.entering {
+  transform: translateX(100%) scale(1); /* start off-screen */
+}
+.slide.entering.active {
+  transform: translateX(0) scale(1); /* animates into place */
+}
+
+.slide.exiting.active {
+  transform: translateX(-100%) scale(1); /* moves out */
 }
