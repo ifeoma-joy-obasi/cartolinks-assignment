@@ -1,8 +1,9 @@
 import React from "react";
 export default React.memo(function CardImage8() {
   return (
-    <div className="w-full flex items-center gap-3 rounded-lg">
+    <div className="w-full flex items-center gap-3">
       
+{/* icon */}
     <svg
   width="44"
   height="44"
@@ -61,14 +62,18 @@ export default React.memo(function CardImage8() {
   />
     </svg>
 
-      <div className="justify-between">
+ {/* Text + New badge */}
+      <div className="flex-1 min-w-0">
         <div className="flex items-center">
           <h3 className="font-medium text-sm">Train</h3>
         </div>
         <p className="text-sm text-gray-500">Train krea to replicate your style, products and characters.</p>
       </div>
 
-      <button className="cursor-pointer ml-auto bg-gray-100 text-black rounded-full h-9 w-24 text-xs font-medium">Open</button>
+      {/* Open button (fixed size) */}
+  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+    Open
+  </button>
     </div>
   );
 });

@@ -2,8 +2,7 @@ import React from "react";
 export default React.memo(function CardImage4() {
   return (
     <div className="w-full flex items-center gap-3">
-      
-      <div className="flex items-center gap-3 ">
+      {/* Icon */}
 
       <div className="relative aspect-square rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10 block shrink-0" style={{background: "linear-gradient(0deg, #888888 0%, #000000 100%)", width: "42px", height: "42px"}}>
       <svg width="24" height="24" className="absolute inset-0 m-auto text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.49935 13.0083C4.34395 13.5194 3.94455 13.9195 3.43425 14.075C3.94455 14.2306 4.34395 14.6306 4.49935 15.1417C4.65465 14.6306 5.05405 14.2306 5.56445 14.075C5.05405 13.9195 4.65465 13.5194 4.49935 13.0083Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -12,7 +11,7 @@ export default React.memo(function CardImage4() {
       </svg>
       </div>
 
-      <div className="justify-between">
+      <div className="flex-1 min-w-0">
         <div className="flex items-center gap-3">
           <h3 className="font-medium text-sm">Enhancer</h3>
           <button className="bg-blue-600 text-white px-1.5 pb-0.5 rounded-full text-xs">New</button>
@@ -20,9 +19,13 @@ export default React.memo(function CardImage4() {
         <p className="text-sm text-gray-500">Upscale and enhance images and videos up to 22k.</p>
       </div>
 
-      <button className="cursor-pointer ml-auto bg-gray-100 text-black rounded-full h-9 w-24 text-xs font-medium">Open</button>
+      {/* Open button (fixed size) */}
+  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+    Open
+  </button>
+
     </div>
-    </div>
+
   );
 });
 

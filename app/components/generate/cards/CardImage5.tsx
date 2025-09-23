@@ -1,9 +1,9 @@
 import React from "react";
 export default React.memo(function CardImage5() {
   return (
-    <div className="w-fullflex items-center gap-3">
+    <div className="w-full flex items-center gap-3">
       
-      <div className="flex items-center gap-3 ">
+
 
     <div className="relative aspect-square rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10 block shrink-0" style={{
           background: "linear-gradient(0deg, #AE91CA 0%, #592A85 60%, #180728 100%)",
@@ -21,7 +21,7 @@ export default React.memo(function CardImage5() {
     </svg>
     </div>
 
-      <div className="justify-between">
+      <div className="flex-1 min-w-0">
         <div className="flex items-center gap-3">
           <h3 className="font-medium text-sm">Edit</h3>
           <button className="bg-blue-600 text-white px-1.5 pb-0.5 rounded-full text-xs">New</button>
@@ -29,9 +29,12 @@ export default React.memo(function CardImage5() {
         <p className="text-sm text-gray-500">Add objects, change style, or expand photos and generations.</p>
       </div>
 
-      <button className="cursor-pointerml-auto bg-gray-100 text-black rounded-full h-9 w-24 text-xs font-medium">Open</button>
+      {/* Open button (fixed size) */}
+  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+    Open
+  </button>
     </div>
-    </div>
+
   );
 });
 

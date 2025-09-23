@@ -1,11 +1,10 @@
 import React from "react";
 export default React.memo(function CardImage2() {
   return (
-    <div className="w-fullflex items-center gap-3">
+    <div className="w-full flex items-center gap-3">
       
-      <div className="flex items-center gap-3">
-
-          <div className="relative aspect-square rounded-[10px] bg-[oklch(79.55%_0.1875_75.3501)] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10 block shrink-0" style={{
+      {/* Icon */}
+      <div className="relative aspect-square rounded-[10px] bg-[oklch(79.55%_0.1875_75.3501)] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10 block shrink-0" style={{
           width: "44px", 
           height: "44px",
           }}>
@@ -18,15 +17,18 @@ export default React.memo(function CardImage2() {
             
           </div>
 
-      <div className="justify-between">
+ {/* Text + New badge */}
+      <div className="flex-1 min-w-0">
         <div className="flex items-center gap-3">
           <h3 className="font-medium text-sm">Video</h3>
         </div>
         <p className="text-sm text-gray-500">Generate videos with Hailuo, Pika,Runway,Luma,and more.</p>
       </div>
 
-      <button className="cursor-pointer ml-auto bg-gray-100 text-black rounded-full h-9 w-24 text-xs font-medium">Open</button>
-    </div>
+     {/* Open button (fixed size) */}
+  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+    Open
+  </button>
     </div>
   );
 });
