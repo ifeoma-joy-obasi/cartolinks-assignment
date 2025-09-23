@@ -110,7 +110,7 @@ export default function LogoUser(): JSX.Element {
                 className={`flex items-center gap-2 rounded-md p-2 transition ${
                   i === 0
                     ? "bg-gray-100 dark:bg-gray-700 mb-0.5" // first item → always gray background
-                    : "hover:bg-blue-50 hover:text-blue-500 active:text-blue-500  transform transition-transform duration-500" // second item → hover only
+                    : "hover:bg-blue-50 active:bg-blue-50 hover:text-blue-500 active:text-blue-500  transform transition-transform duration-500" // second item → hover only
                 }`}
               >
                 {/* Gradient circle only for first item */}
