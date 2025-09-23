@@ -7,17 +7,17 @@ const Footer = () => {
     <div>
        <div className="mt-12 max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className='flex justify-between items-center'>
-            <h2 className='text-[22px] font-semibold m-0 p-0'>Gallery</h2>
+            <h2 className='text-[22px] font-semibold m-0 p-0 leading-none'>Gallery</h2>
 
             <div className='flex items-center gap-2'>
 
-                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 '>
+                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 hover:bg-gray-200 active:bg-gray-200 transform transition-transform duration-500'>
                 <PaperIcon className='text-[rgba(19,20,20,0.9)]'/>
                 <p>Legal</p>
 
                 </div>
 
-                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 '>
+                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 hover:bg-gray-200 active:bg-gray-200 transform transition-transform duration-500'>
                 <CardIcon className='text-[rgba(19,20,20,0.9)]'/>
                 <p>Pricing</p>
 
