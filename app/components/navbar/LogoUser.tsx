@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion } from "framer-motion";
-import Logo from "../../../assets/logo.png";
 import { RoundSettingsIcon,CardIcon,LogOutIcon,HandsIcon } from "../../../assets/index";
 
 
@@ -66,7 +65,7 @@ export default function LogoUser(): JSX.Element {
     <div className="flex items-center gap-8 cursor-pointer ">
 
       {/* Logo */}
-      <Image src={Logo} alt="Logo" width={28} height={28} />
+      <Image src="/logo.png" alt="Logo" width={28} height={28} />
         
 
       {/* Trigger */}

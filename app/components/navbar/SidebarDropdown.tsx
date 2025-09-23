@@ -122,8 +122,8 @@ export default function LogoUser(): JSX.Element {
 
                 {/* Icon only for second item */}
                 {i === 1 && m.Icon && (
-                  <div className="bg-blue-100 p-1 rounded-md">
-                  <m.Icon className="text-[18px]" />
+                  <div className="bg-blue-100 p-1 rounded-md cursor-pointer">
+                  <m.Icon className="text-[18px] cursor-pointer" />
                 </div>
                 )}
 
