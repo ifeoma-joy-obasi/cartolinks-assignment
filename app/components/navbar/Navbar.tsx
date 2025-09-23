@@ -88,7 +88,7 @@ useEffect(() => {
     
         {/* Sidebar */}
         <aside
-        className={`bg-white/70 backdrop-blur-md shadow-[4px_0_12px_rgba(0,0,0,0.08)] z-50 lg:hidden fixed top-0 left-0 h-full w-[75%] md:w-90 dark:bg-gray-900 transform transition-transform duration-800 ${
+        className={`bg-white/70 backdrop-blur-md shadow-[4px_0_12px_rgba(0,0,0,0.08)] z-50 lg:hidden fixed top-0 left-0 h-full w-[70%] md:w-90 dark:bg-gray-900 transform transition-transform duration-800 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
