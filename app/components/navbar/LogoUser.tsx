@@ -65,7 +65,7 @@ export default function LogoUser(): JSX.Element {
     <div className="flex items-center gap-8 cursor-pointer ">
 
       {/* Logo */}
-      <Image src="/logo.png" alt="Logo" width={28} height={28} />
+      <Image src="/Logo.png" alt="Logo" width={28} height={28} />
         
 
       {/* Trigger */}
