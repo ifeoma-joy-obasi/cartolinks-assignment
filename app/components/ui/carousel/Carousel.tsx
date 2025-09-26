@@ -72,15 +72,10 @@ const prev = () => {
     const step = getSlideStep();
     const left = Math.round(index * step);
     container.scrollTo({ left, behavior: "smooth" });
-    setCurrent(index); // ✅ FIX: update current when using arrows or dots
+    setCurrent(index); // FIX: update current when using arrows or dots
   };
 
-  // const next = () => {
-  //   scrollToIndex(Math.min(current + 1, IMAGES.length - 1));
-  // };
-  // const prev = () => {
-  //   scrollToIndex(Math.max(current - 1, 0));
-  // };
+ 
 
   return (
     <div className="relative w-full">
@@ -91,49 +86,31 @@ const prev = () => {
         style={{ columnGap: "2rem" }}
       >
         {IMAGES.map((img, i) => (
-          // <motion.div
-          //   key={img.id}
-          //   ref={i === 0 ? firstSlideRef : undefined}
-          //   className="flex-shrink-0 snap-start rounded-2xl overflow-hidden"
-          //   style={{ width: "60%" }}
-          //   initial={{ opacity: 0.9, scale: 0.98 }}
-          //   animate={i === current ? { opacity: 1, scale: 1 } : { opacity: 0.9, scale: 0.97 }}
-          //   transition={{ duration: 0.35, ease: "easeOut" }}
-          // >
-          //   <Image
-          //     src={img.src}
-          //     alt={`Slide ${i + 1}`}
-          //     width={1280}
-          //     height={480}
-          //     className="w-full h-[480px] object-cover"
-          //     draggable={false}
-          //   />
-          // </motion.div>
-
+          
 
           <motion.div
-  key={img.id}
-  ref={i === 0 ? firstSlideRef : undefined}
-  className="flex-shrink-0 snap-start rounded-2xl overflow-hidden"
-  style={{ width: "60%" }}
-  initial={{ opacity: 1, scale: 1 }}
-  animate={
-    i === current && direction
-      ? { scale: 1.05, opacity: 1 }
-      : { scale: 1, opacity: 1 }
-  }
-  transition={{ duration: 0.35, ease: "easeOut" }}
-  onAnimationComplete={() => setDirection(null)} // reset after anim
->
-  <Image
-    src={img.src}
-    alt={`Slide ${i + 1}`}
-    width={1280}
-    height={480}
-    className="w-full h-[480px] object-cover"
-    draggable={false}
-  />
-</motion.div>
+            key={img.id}
+            ref={i === 0 ? firstSlideRef : undefined}
+            className="flex-shrink-0 snap-start rounded-2xl overflow-hidden"
+            style={{ width: "60%" }}
+            initial={{ opacity: 1, scale: 1 }}
+            animate={
+              i === current && direction
+                ? { scale: 1.05, opacity: 1 }
+                : { scale: 1, opacity: 1 }
+            }
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            onAnimationComplete={() => setDirection(null)} // reset after anim
+          >
+          <Image
+            src={img.src}
+            alt={`Slide ${i + 1}`}
+            width={1280}
+            height={480}
+            className="w-full h-[480px] object-cover"
+            draggable={false}
+          />
+        </motion.div>
 
 
         ))}
@@ -144,7 +121,7 @@ const prev = () => {
         <button
           onClick={prev}
           aria-label="Previous"
-          className=".exiting p-2 bg-gray-100 dark:bg-gray-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
+          className=".exiting p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
           disabled={current === 0}
         >
           <CheveronLeftIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
@@ -152,7 +129,7 @@ const prev = () => {
         <button
           onClick={next}
           aria-label="Next"
-          className=".entering p-2 bg-gray-100 dark:bg-gray-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
           disabled={current >= IMAGES.length - 1}
         >
           <CheveronRightIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
@@ -165,7 +142,7 @@ const prev = () => {
           <button
             key={idx}
             className={`cursor-pointer w-2 h-2 rounded-full transition ${
-              idx === current ? "bg-gray-800" : "bg-gray-200"
+              idx === current ? "bg-gray-800 dark:bg-zinc-800" : "bg-gray-200 dark:bg-zinc-700"
             }`}
             onClick={() => scrollToIndex(idx)}
             aria-label={`Go to slide ${idx + 1}`}

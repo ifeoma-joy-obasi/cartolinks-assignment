@@ -65,8 +65,25 @@ export default function LogoUser(): JSX.Element {
     <div className="flex items-center gap-8 cursor-pointer ">
 
       {/* Logo */}
-      <Image src="/Logo.png" alt="Logo" width={28} height={28} />
-        
+    
+      {/* Light mode logo */}
+      <Image
+        src="/Logo.png"
+        alt="Logo"
+        width={28}
+        height={28}
+        className="block dark:hidden"
+      />
+
+      {/* Dark mode logo */}
+      <Image
+        src="/logodarkmode.png"
+        alt="Logo Dark"
+        width={28}
+        height={28}
+        className="hidden dark:block"
+      />
+    
 
       {/* Trigger */}
       <button
@@ -82,13 +99,13 @@ export default function LogoUser(): JSX.Element {
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-300 via-blue-200 to-blue-50" />
 
         {/* username */}
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-200 truncate max-w-[10rem]">
+        <span className="text-sm font-medium text-gray-700 dark:text-white truncate max-w-[10rem]">
           benevolentnimblebat
         </span>
 
         {/* chevron */}
         <ChevronDownIcon
-          className={`w-4 h-4 text-gray-500 transform transition-transform duration-150 ${
+          className={`w-4 h-4 text-gray-500 dark:text-white transform transition-transform duration-150 ${
             open ? "rotate-180" : "rotate-0"
           }`}
         />
@@ -108,13 +125,13 @@ export default function LogoUser(): JSX.Element {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-lg z-50 overflow-hidden"
+            className="absolute left-0 mt-2 w-48 rounded-lg bg-white dark:bg-black border border-gray-100 dark:border-black shadow-lg z-50 overflow-hidden"
           >
             <div className="m-1">
               {MENU.map((m) =>
                     m.href ? (
-                  <div key={m.label} className="text-[14px] font-medium text-gray-700 dark:text-gray-200 focus:outline-none">
-                    <div className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md p-3">
+                  <div key={m.label} className="text-[14px] font-medium text-gray-700 dark:text-white focus:outline-none">
+                    <div className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-zinc-900 rounded-md p-3">
                     {m.Icon && <m.Icon className="text-[18px]"/>}
 
 
@@ -142,9 +159,9 @@ export default function LogoUser(): JSX.Element {
                 m.onClick?.();
                 setOpen(false);
               }}
-              className="w-full rounded-md p-3 cursor-pointer flex items-center gap-2 text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+              className="w-full rounded-md p-4 cursor-pointer flex items-center gap-2 text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-zinc-900 focus:outline-none"
             >
-              {m.Icon && <m.Icon className="text-[18px] text-gray-600 dark:text-gray-300" />}
+              {m.Icon && <m.Icon className="text-[18px] text-gray-600 dark:text-white" />}
               {m.label}
             </button>
                  
@@ -152,11 +169,11 @@ export default function LogoUser(): JSX.Element {
 
               )}
 
-              <div className="border-t border-gray-100">
+              <div className="border-t border-gray-100 dark:border-zinc-900">
 
-                <div className="flex flex-col gap-1.5 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md p-3 mt-1">
-                  <p className="text-sm font-medium text-gray-700 ">0% daily credits used</p>
-                  <div className="bg-gray-200 w-full rounded-full p-0.5"></div>
+                <div className="flex flex-col gap-1.5 cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-900 rounded-md p-3 mt-1">
+                  <p className="text-sm font-medium text-gray-700 dark:text-white ">0% daily credits used</p>
+                  <div className="bg-gray-200 dark:bg-zinc-800 w-full rounded-full p-0.5"></div>
                 </div>
               </div>
             </div>

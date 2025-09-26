@@ -1,39 +1,22 @@
-/* @import "tailwindcss";
-
+ @import "tailwindcss";
+ 
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  transition: all;
-  transition-duration: 300ms;
-  background: var(--background); 
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  
-} */
+   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+   color-scheme: light dark;
+   font-synthesis:none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+} 
 
 
-@import "tailwindcss";
+
 
 body {
   transition: all 0.3s ease;
+
 
 }
 
@@ -76,18 +59,3 @@ body {
 .carousel > * { scroll-snap-align: start; }
 
 
-/* carousel animation */
-.slide {
-  transform: scale(1);
-  transition: transform 0.5s ease; /* only animates when changed */
-}
-.slide.entering {
-  transform: translateX(100%) scale(1); /* start off-screen */
-}
-.slide.entering.active {
-  transform: translateX(0) scale(1); /* animates into place */
-}
-
-.slide.exiting.active {
-  transform: translateX(-100%) scale(1); /* moves out */
-}

@@ -4,7 +4,7 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 import { usePathname } from "next/navigation";
 
 import Link from "next/link";
-// import React, { useState } from "react";
+
 import {
    HomeIcon,
     ImageIcon, 
@@ -31,7 +31,7 @@ const CenterNav: React.FC = () => {
 
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-xl p-2 space-x-4">
+    <div className="flex items-center justify-center bg-gray-100 dark:bg-zinc-800 rounded-xl p-2 space-x-4">
       {navItems.map((item) => {
         const Icon = item.icon;
         return (
@@ -39,22 +39,28 @@ const CenterNav: React.FC = () => {
           <Tooltip.Provider key={item.name} delayDuration={100}>
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
-                <button
-                  aria-current={pathname === item.href ? "page" : undefined}
-                  className={`p-3 cursor-pointer rounded-xl flex items-center justify-center transition ${
-                  pathname === item.href
-                    ? "bg-white shadow-md"
-                    : "hover:bg-gray-300"
-                }`}
+           <button
+              aria-current={pathname === item.href ? "page" : undefined}
+              className={`p-3 cursor-pointer rounded-xl flex items-center justify-center transition ${
+                pathname === item.href
+                  ? "bg-white shadow-md"
+                  : "hover:bg-gray-300 dark:hover:bg-zinc-700"
+              }`}
+            >
+           <Icon
+             className={`w-4 h-4 
+             ${item.name === "Home" && pathname === "/" 
+              ? "text-black" // force black when active on Home
+              : "text-black dark:text-white"} 
+          `}
+        />
+      </button>
 
-                >
-                  <Icon className="w-4 h-4 text-black" />
-                </button>
               </Tooltip.Trigger>
               <Tooltip.Portal>
                 <Tooltip.Content
                   side="top"
-                  className="bg-gray-100 text-black px-2 py-1 rounded-md text-[12px] shadow-md mt-4"
+                  className="bg-gray-100 dark:bg-zinc-800 text-black dark:text-white px-2 py-1 rounded-md text-[12px] shadow-md mt-4"
                 >
                   {item.name}
                 </Tooltip.Content>

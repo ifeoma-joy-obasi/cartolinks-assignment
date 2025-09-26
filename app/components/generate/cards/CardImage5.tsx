@@ -26,11 +26,11 @@ export default React.memo(function CardImage5() {
           <h3 className="font-medium text-sm">Edit</h3>
           <button className="bg-blue-600 text-white px-1.5 pb-0.5 rounded-full text-xs">New</button>
         </div>
-        <p className="text-sm text-gray-500">Add objects, change style, or expand photos and generations.</p>
+        <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 cursor-pointer">Add objects, change style, or expand photos and generations.</p>
       </div>
 
       {/* Open button (fixed size) */}
-  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0">
     Open
   </button>
     </div>

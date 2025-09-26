@@ -88,17 +88,17 @@ useEffect(() => {
     
         {/* Sidebar */}
         <aside
-        className={`bg-white/70 backdrop-blur-md shadow-[4px_0_12px_rgba(0,0,0,0.08)] z-50 lg:hidden fixed top-0 left-0 h-full w-[80%] md:w-90 dark:bg-gray-900 transform transition-transform duration-800 ${
+        className={`group bg-white/70 backdrop-blur-md shadow-[4px_0_12px_rgba(0,0,0,0.08)] z-50 lg:hidden fixed top-0 left-0 h-full w-[80%] md:w-90 dark:bg-black transform transition-transform duration-800 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Sidebar Header */}
-        <div className="sticky top-0 bg-white backdrop-blur-md z-50 flex justify-between items-start p-4  border-gray-200 dark:border-gray-700">
+        <div className="sticky top-0 bg-white dark:bg-neutral-950 backdrop-blur-md z-50 flex justify-between items-start p-4  border-gray-200 dark:border-zinc-700">
           <button
             onClick={() => setIsOpen(false)}
-            className="text-black text-[22px]"
+            className="text-black dark:text-white text-[22px]"
           >
-          <CloseButtonIcon className="cursor-pointer"/>
+          <CloseButtonIcon className="cursor-pointer "/>
           </button>
           
 
@@ -108,19 +108,19 @@ useEffect(() => {
 
 
         {/* Sidebar Body */}
-        <div className="overflow-y-auto h-[calc(100%-56px)] sidebar-scroll bg-white">
+        <div className="overflow-y-auto h-[calc(100%-56px)] sidebar-scroll bg-white dark:bg-neutral-950">
          {/* scrollable content */}
      
      <div className="px-4 py-6 grid place-items-start ">
         
         <Link href='/' className="flex items-center gap-3">
-         <div className="bg-gray-900 text-white/95  relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100">
+         <div className="bg-gray-900 dark:bg-gray-100 text-white/95 dark:text-black/95 relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100">
           <svg aria-label="Krea Logo" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.34 1.266c1.766-.124 3.324 1.105 3.551 2.802.216 1.612-.887 3.171-2.545 3.536-.415.092-.877.066-1.317.122a4.63 4.63 0 0 0-2.748 1.34l-.008.004-.01-.001-.006-.005-.003-.009q0-.009.005-.016a.04.04 0 0 0 .007-.022 438 438 0 0 1-.01-4.541c.003-1.68 1.33-3.086 3.085-3.21"></path>
           <path d="M8.526 15.305c-2.247-.018-3.858-2.23-3.076-4.3a3.31 3.31 0 0 1 2.757-2.11c.384-.04.845-.03 1.215-.098 1.9-.353 3.368-1.806 3.665-3.657.066-.41.031-.9.128-1.335.449-2.016 2.759-3.147 4.699-2.236 1.011.476 1.69 1.374 1.857 2.447q.051.33.034.818c-.22 5.842-5.21 10.519-11.279 10.47m2.831.93a.04.04 0 0 1-.021-.02l-.001-.006.002-.006q0-.003.003-.004l.006-.003q3.458-.792 5.992-3.185.045-.042.083.007c.27.357.554.74.78 1.106a10.6 10.6 0 0 1 1.585 4.89q.037.53.023.819c-.084 1.705-1.51 3.08-3.31 3.09-1.592.01-2.992-1.077-3.294-2.597-.072-.36-.05-.858-.11-1.238q-.282-1.755-1.715-2.84zm-3.369 6.64c-1.353-.235-2.441-1.286-2.684-2.593a5 5 0 0 1-.05-.817V15.14q0-.021.016-.007c.884.786 1.814 1.266 3.028 1.346l.326.01c1.581.051 2.92 1.087 3.229 2.592.457 2.225-1.557 4.195-3.865 3.793"></path>
           </svg>
          </div>
-         <p className="text-black ">Home</p>
+         <p className="text-black dark:text-white">Home</p>
          </Link>
       </div>
 
@@ -129,7 +129,7 @@ useEffect(() => {
 <div className="space-y-4 px-4 ">
 <div className="flex items-center justify-between cursor-pointer">
   <div className="flex items-center gap-3 ">
-<div className=" cursor-pointer text-white/95 bg-opacity-15 bg-gray-900 relative aspect-square h-11 rounded-[10px] opacity-100">
+<div className=" cursor-pointer bg-opacity-15 bg-gray-900  dark:bg-gray-100 text-white/95 dark:text-black/95 relative aspect-square h-11 rounded-[10px] opacity-100">
   <svg xmlns="http://www.w3.org/2000/svg" width='14' height='14' viewBox="0 0 24 24" fill="none" stroke='currentColor' strokeWidth='1.7142857142857142' strokeLinecap='round' strokeLinejoin='round' className="lucide-icon lucide lucide-sparkles absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110">
   <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
   <path d="M5 3v4"></path>
@@ -147,22 +147,22 @@ useEffect(() => {
   
   <div className="flex items-center gap-3">
     {/* user gradientcircle */}
-<div className="p-[2px] rounded-xl bg-gray-100 hover:bg-gray-200 transition cursor-pointer">
+<div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 active:bg-gray-200 dark:hover:bg-zinc-700 dark:active:bg-zinc-700 transition cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
       </div>
 <p>Profile</p>
 </div>
-<button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+<button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 <div className="flex items-center justify-between cursor-pointer">
   <div className="flex items-center gap-3 ">
-<div className="bg-opacity-15 bg-gray-100 relative aspect-square h-11 rounded-[10px] opacity-100">
-  <SettingsIcon className="absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110"/>
+<div className="bg-opacity-15 bg-gray-100 dark:bg-zinc-800 relative aspect-square h-11 rounded-[10px] opacity-100">
+  <SettingsIcon className="absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110 dark:text-white"/>
 </div>
 <p>Settings</p>
 </div>
-<button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+<button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 </div>
@@ -177,7 +177,7 @@ useEffect(() => {
       >
         <span className="font-medium text-2xl  mt-5 mb-4">Apps</span>
         <ChevronDownIcon
-          className={`h-4 w-4 font-medium transform transition-transform duration-200 ${
+          className={`h-4 w-4 font-medium transform transition-transform duration-200 dark:text-white${
             appsOpen ? "rotate-0" : "-rotate-90"
           }`}
         />
@@ -205,7 +205,7 @@ useEffect(() => {
       </div>
       <p>Image</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -227,7 +227,7 @@ useEffect(() => {
       </div>
       <p>Video</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -243,7 +243,7 @@ useEffect(() => {
       </div>
       <p>Realtime</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -261,7 +261,7 @@ useEffect(() => {
 
       <p>Enhancer</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -277,7 +277,7 @@ useEffect(() => {
      </div>
       <p>Video Lipsync</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -293,7 +293,7 @@ useEffect(() => {
      </div>
       <p>Motion Transfer</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 {/* item 7*/}
@@ -304,7 +304,7 @@ useEffect(() => {
   height="44"
   viewBox="0 0 24 24"
   fill="none"
-  className="dark:text-primary-0 text-[#c4c4c5] block shrink-0"
+  className="text-[#c4c4c5] d block shrink-0"
   xmlns="http://www.w3.org/2000/svg"
 >
   <defs>
@@ -359,7 +359,7 @@ useEffect(() => {
 
       <p>Train</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -371,7 +371,7 @@ useEffect(() => {
      </div>
       <p>3D Objects</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 
@@ -382,7 +382,7 @@ useEffect(() => {
      <svg width="44" height="44" viewBox="0 0 46 46" fill="none" className="block shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M5.16699 9.41601C5.16699 8.31144 6.06242 7.41602 7.16699 7.41602H16.7125C17.4968 7.41602 18.2087 7.87442 18.5332 8.58841L19.3008 10.277C19.6253 10.9909 20.3372 11.4493 21.1215 11.4493H39.8337C40.9382 11.4493 41.8337 12.3448 41.8337 13.4493V25.5827C41.8337 26.6873 40.9382 27.5827 39.8337 27.5827H7.16699C6.06243 27.5827 5.16699 26.6873 5.16699 25.5827V9.41601Z" fill="#2B93BF"></path><rect x="5.16699" y="13.2598" width="36.6667" height="25.3229" rx="2" fill="#3AC4FF"></rect><path d="M5.28147 36.2445C5.17675 35.6966 5.16776 34.9794 5.16699 33.907H41.8335C41.8327 34.9794 41.8238 35.6966 41.719 36.2445H5.28147Z" fill="black" fillOpacity="0.05"></path><path d="M9.76801 38.5841H37.2321C38.8427 38.5841 39.648 38.5841 40.2631 38.2444C40.8043 37.9456 41.2442 37.4688 41.5199 36.8824C41.6093 36.6923 41.6731 36.4855 41.7188 36.2466H5.28125C5.32692 36.4855 5.3908 36.6923 5.48014 36.8824C5.75586 37.4688 6.1958 37.9456 6.73692 38.2444C7.35209 38.5841 8.1574 38.5841 9.76801 38.5841Z" fill="black" fillOpacity="0.1"></path></svg>
       <p>Assets</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 {/* item 10 */}
@@ -393,7 +393,7 @@ useEffect(() => {
      </div>
       <p>Chat</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 text-black rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
 </div>
 
 

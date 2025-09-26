@@ -15,7 +15,7 @@ const {theme, setTheme}=useTheme()
 
   return (
     <div className="flex items-center gap-2">
-      <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer">
+      <button className="p-2 rounded-lg bg-gray-100 dark:dark:bg-zinc-800 hover:bg-gray-200 dark:hover:dark:bg-zinc-700 cursor-pointer">
         <NotificationIcon />
       </button>
 
@@ -23,13 +23,13 @@ const {theme, setTheme}=useTheme()
       <button
         onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
         
-        className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer transition"
+        className="group p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 cursor-pointer transition-colors duration-300"
       >
-       {theme === 'light' ? <SunIcon />:<MoonIcon /> }
+       {theme === 'light' ? <SunIcon />:<MoonIcon className='dark:text-gray-200 dark:group-hover:text-white transition-colors duration-300'/> }
       </button>
 
       {/* Gradient user circle */}
-      <div className="p-[2px] rounded-xl bg-gray-100 hover:bg-gray-200 transition cursor-pointer">
+      <div className="p-[2px] rounded-xl bg-gray-100 dark:dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition cursor-pointer">
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
       </div>
       

@@ -55,32 +55,34 @@ export default function LogoUser(): JSX.Element {
     <div className="flex items-center gap-8 cursor-pointer">
 
       {/* Trigger */}
-      <button
-        onClick={toggle}
-        aria-expanded={open}
-        aria-haspopup="menu"
-        aria-controls="profile-dropdown"
-        className="flex items-center gap-3 transition cursor-pointer focus-within:outline-none focus-visible:outline-none "
-      >
-        
+ <button
+  onClick={toggle}
+  aria-expanded={open}
+  aria-haspopup="menu"
+  aria-controls="profile-dropdown"
+  className={`flex items-center gap-3 transition cursor-pointer focus:outline-none 
+    brightness-70 hover:brightness-100 active:brightness-110 
+    ${open ? "brightness-100" : ""}`}
+>
+  {/* chevron */}
+  <ChevronDownIcon
+    className={`w-4 h-4 text-gray-500 dark:text-gray-100 transform transition-transform duration-150 ${
+      open ? "rotate-180" : "rotate-0"
+    }`}
+  />
 
-        {/* chevron */}
-        <ChevronDownIcon
-          className={`w-4 h-4 text-gray-500 transform transition-transform duration-150 ${
-            open ? "rotate-180" : "rotate-0"
-          }`}
-        />
-        {/* User Gradient Circle */}
-      <div className="p-[2px] rounded-xl bg-gray-100 hover:bg-gray-200 transition cursor-pointer">
-        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
-      </div>
+  {/* User Gradient Circle */}
+  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 transition">
+    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
+  </div>
 
-        {/* username */}
-        <span className="text-[12px] font-light text-gray-500 dark:text-gray-200 truncate max-w-[10rem]">
-          benevolentnimblebat
-        </span>
+  {/* username */}
+  <span className="text-[12px] font-light text-gray-500 dark:text-gray-100 truncate max-w-[10rem]">
+    benevolentnimblebat
+  </span>
+</button>
 
-      </button>
+
 </div>
 
 
@@ -96,33 +98,33 @@ export default function LogoUser(): JSX.Element {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute right-0 mt-2 w-54 rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-lg z-50 overflow-hidden"
+            className="absolute right-0 mt-2 w-54 rounded-lg bg-white dark:bg-black border border-gray-100 dark:border-black shadow-lg z-50 overflow-hidden"
           >
             <div className="m-2 ">
-              <h1 className="text-sm font-medium text-gray-700 dark:text-gray-200 my-1">Workspaces</h1>
+              <h1 className="text-[12px] font-medium text-gray-700 dark:text-gray-400 my-1">Workspaces</h1>
               
               {MENU.map((m, i) => (
             <div
               key={m.label}
-              className={`text-gray-900 text-sm font-medium focus:outline-none`}
+              className={`text-gray-900 dark:text-white text-[12px] font-medium focus:outline-none`}
             >
               <div
-                className={`flex items-center gap-2 rounded-md p-2 transition ${
+                className={`flex items-center gap-2 rounded-md transition ${
                   i === 0
-                    ? "bg-gray-100 dark:bg-gray-700 mb-0.5" // first item → always gray background
-                    : "hover:bg-blue-50 active:bg-blue-50 hover:text-blue-500 active:text-blue-500  transform transition-transform duration-500" // second item → hover only
+                    ? "bg-gray-100 dark:bg-neutral-900 mb-0.5 p-1" // first item → always gray background
+                    : "hover:bg-blue-50 dark:hover:bg-blue-950/50 p-2 active:bg-blue-50 dark:active:bg-blue-950/50 hover:text-blue-500 active:text-blue-500  transform transition-transform duration-500" // second item → hover only
                 }`}
               >
                 {/* Gradient circle only for first item */}
                 {i === 0 && (
-                  <div className="p-[2px] rounded-xl bg-gray-100">
+                  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
                   </div>
                 )}
 
                 {/* Icon only for second item */}
                 {i === 1 && m.Icon && (
-                  <div className="bg-blue-100 p-1 rounded-md cursor-pointer">
+                  <div className="bg-blue-100 dark:bg-neutral-900 p-1 rounded-md cursor-pointer">
                   <m.Icon className="text-[18px] cursor-pointer" />
                 </div>
                 )}

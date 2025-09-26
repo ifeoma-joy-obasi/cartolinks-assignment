@@ -11,14 +11,14 @@ const Footer = () => {
 
             <div className='flex items-center gap-2'>
 
-                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 hover:bg-gray-200 active:bg-gray-200 transform transition-transform duration-500'>
-                <PaperIcon className='text-[rgba(19,20,20,0.9)]'/>
+                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 dark:bg-zinc-800 rounded-full p-2 hover:bg-gray-200 hover:dark:bg-zinc-700 active:bg-gray-200 active:dark:bg-zinc-700 transform transition-transform duration-500'>
+                <PaperIcon className='text-[rgba(19,20,20,0.9)] dark:text-white'/>
                 <p>Legal</p>
 
                 </div>
 
-                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 rounded-full p-2 hover:bg-gray-200 active:bg-gray-200 transform transition-transform duration-500'>
-                <CardIcon className='text-[rgba(19,20,20,0.9)]'/>
+                <div className='flex items-center gap-2 cursor-pointer bg-gray-100 dark:bg-zinc-800 rounded-full p-2 hover:bg-gray-200 hover:dark:bg-zinc-700 active:bg-gray-200 active:dark:bg-zinc-700 transform transition-transform duration-500'>
+                <CardIcon className='text-[rgba(19,20,20,0.9)] dark:text-white'/>
                 <p>Pricing</p>
 
                 </div>
@@ -29,17 +29,17 @@ const Footer = () => {
 
           
 
-            <footer className='mt-2 flex justify-between items-center text-white bg-[rgba(19,20,20,0.9)] p-5'>
-  <div className='flex items-center gap-3'>
-    {/* Krea logo */}
-    <Image 
-      src="https://www.krea.ai/favicon/favicon-64-dark.png" 
-      alt="Krea AI" 
-      width={40} height={40} 
-      className='rounded-md w-6 h-6 md:w-10 md:h-10 lg:w-[50px] lg:h-[50px]'
-    />
-    <h2 className='text-sm md:text-xl lg:text-[35px] font-medium'>Krea AI</h2>
-  </div>
+            <footer className='mt-2 flex justify-between items-center text-white bg-[rgba(19,20,20,0.9)] dark:bg-zinc-800 p-5'>
+            <div className='flex items-center gap-3'>
+              {/* Krea logo */}
+              <Image 
+                src="https://www.krea.ai/favicon/favicon-64-dark.png" 
+                alt="Krea AI" 
+                width={40} height={40} 
+                className='rounded-md w-6 h-6 md:w-10 md:h-10 lg:w-[50px] lg:h-[50px]'
+              />
+              <h2 className='text-sm md:text-xl lg:text-[35px] font-medium'>Krea AI</h2>
+            </div>
 
   <div className='flex items-center gap-3'>
     <h2 className='text-sm md:text-xl lg:text-[25px] font-medium'>Curated by</h2>

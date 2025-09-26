@@ -44,13 +44,13 @@
         New
       </button>
     </div>
-    <p className="text-sm text-gray-500">
+    <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 cursor-pointer">
       Lip sync any video to any audio.
     </p>
   </div>
 
   {/* Open button (fixed size) */}
-  <button className="cursor-pointer bg-gray-100 text-black rounded-full h-9 w-15 text-xs font-medium shrink-0">
+  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0">
     Open
   </button>
 </div>
