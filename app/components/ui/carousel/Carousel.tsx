@@ -107,7 +107,7 @@ const prev = () => {
             alt={`Slide ${i + 1}`}
             width={1280}
             height={480}
-            className="w-full h-[480px] object-cover"
+            className="w-full h-[480px] object-cover "
             draggable={false}
           />
         </motion.div>
@@ -121,7 +121,7 @@ const prev = () => {
         <button
           onClick={prev}
           aria-label="Previous"
-          className=".exiting p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
           disabled={current === 0}
         >
           <CheveronLeftIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
@@ -137,7 +137,7 @@ const prev = () => {
       </div>
 
       {/* dots */}
-      <div className="mt-3 flex gap-2">
+      <div className="mt-3 flex gap-2 absolute left-18 md:left-80 lg:left-110 xl:left-160">
         {IMAGES.map((_, idx) => (
           <button
             key={idx}

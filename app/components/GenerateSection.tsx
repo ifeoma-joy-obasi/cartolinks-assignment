@@ -57,7 +57,7 @@ export default function GenerateSection({
 
       {/* grid: animated layout changes with framer-motion */}
    <motion.div id={`generate-grid-${id}`} layout>
-        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <AnimatePresence initial={false}>
             {visibleItems.map((item) => (
               <motion.div

@@ -5,7 +5,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-       <div className="mt-12 max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
+       <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className='flex justify-between items-center'>
             <h2 className='text-[22px] font-semibold m-0 p-0 '>Gallery</h2>
 

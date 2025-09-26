@@ -61,7 +61,7 @@ export default function LogoUser(): JSX.Element {
   aria-haspopup="menu"
   aria-controls="profile-dropdown"
   className={`flex items-center gap-3 transition cursor-pointer focus:outline-none 
-    brightness-70 hover:brightness-100 active:brightness-110 
+    dark:brightness-70 hover:brightness-100 active:brightness-110 
     ${open ? "brightness-100" : ""}`}
 >
   {/* chevron */}

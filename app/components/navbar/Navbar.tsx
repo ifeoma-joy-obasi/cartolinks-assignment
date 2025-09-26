@@ -12,6 +12,9 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import SidebarDropdown from "../../components/navbar/SidebarDropdown";
 
+// theme
+import { useTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from '../../../assets'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +46,16 @@ useEffect(() => {
     window.scrollTo(0, parseInt(scrollY || "0") * -1);
   }
 }, [isOpen]);
+
+
+// theme functionality
+  const [mounted, setMounted] = useState(false)
+const {theme, setTheme}=useTheme()
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
 
 
 
@@ -77,12 +90,12 @@ useEffect(() => {
       </div>
 
         {/* Overlay */}
-{isOpen && (
-  <div
-    className="lg:hidden fixed inset-0 bg-white/10 backdrop-blur-md z-40 cursor-pointer"
-    onClick={() => setIsOpen(false)}
-  ></div>
-)}
+        {isOpen && (
+          <div
+            className="lg:hidden fixed inset-0 bg-white/10 backdrop-blur-md z-40 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          ></div>
+        )}
     
 
     
@@ -110,8 +123,24 @@ useEffect(() => {
         {/* Sidebar Body */}
         <div className="overflow-y-auto h-[calc(100%-56px)] sidebar-scroll bg-white dark:bg-neutral-950">
          {/* scrollable content */}
+
+       
      
      <div className="px-4 py-6 grid place-items-start ">
+
+      {/* light mode and dark mode on mobile sidebar */}
+         <div className="flex items-center gap-3 mb-4 ">
+          {/* theme button */}
+          <button
+                  onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
+                  
+                  className="group p-2 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 cursor-pointer transition-colors duration-300 relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100 "
+                >
+                 {theme === 'light' ? <SunIcon className="group-hover:scale-110 group-active:scale-110"/>:<MoonIcon className='dark:text-gray-200 dark:group-hover:text-white transition-colors duration-300 group-hover:scale-110 group-active:scale-110'/> }
+                </button>
+          
+            <p className="text-black dark:text-white">Theme</p>
+         </div>
         
         <Link href='/' className="flex items-center gap-3">
          <div className="bg-gray-900 dark:bg-gray-100 text-white/95 dark:text-black/95 relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100">
@@ -130,7 +159,7 @@ useEffect(() => {
 <div className="flex items-center justify-between cursor-pointer">
   <div className="flex items-center gap-3 ">
 <div className=" cursor-pointer bg-opacity-15 bg-gray-900  dark:bg-gray-100 text-white/95 dark:text-black/95 relative aspect-square h-11 rounded-[10px] opacity-100">
-  <svg xmlns="http://www.w3.org/2000/svg" width='14' height='14' viewBox="0 0 24 24" fill="none" stroke='currentColor' strokeWidth='1.7142857142857142' strokeLinecap='round' strokeLinejoin='round' className="lucide-icon lucide lucide-sparkles absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110">
+  <svg xmlns="http://www.w3.org/2000/svg" width='14' height='14' viewBox="0 0 24 24" fill="none" stroke='currentColor' strokeWidth='1.7142857142857142' strokeLinecap='round' strokeLinejoin='round' className="lucide-icon lucide lucide-sparkles absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110 group-active:scale-110">
   <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
   <path d="M5 3v4"></path>
   <path d="M19 17v4"></path>
