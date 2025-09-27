@@ -71,7 +71,7 @@ export default function LogoUser(): JSX.Element {
   />
 
   {/* User Gradient Circle */}
-  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition">
+  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:active:bg-zinc-700 transition">
     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
   </div>
 
