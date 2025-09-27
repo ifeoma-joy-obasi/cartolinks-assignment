@@ -60,7 +60,7 @@ export default function LogoUser(): JSX.Element {
   aria-expanded={open}
   aria-haspopup="menu"
   aria-controls="profile-dropdown"
-  className={`flex items-center gap-3 transition cursor-pointer focus:outline-none `}
+  className={`flex items-center gap-3 transition cursor-pointer focus-within:outline-none focus-visible:outline-none focus:outline-none shrink-0`}
     
 >
   {/* chevron */}

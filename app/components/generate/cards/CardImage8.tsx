@@ -67,11 +67,11 @@ export default React.memo(function CardImage8() {
         <div className="flex items-center">
           <h3 className="font-medium text-sm">Train</h3>
         </div>
-        <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 cursor-pointer">Train krea to replicate your style, products and characters.</p>
+        <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 dark:active:text-zinc-400 cursor-pointer">Train krea to replicate your style, products and characters.</p>
       </div>
 
       {/* Open button (fixed size) */}
-  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0">
+  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">
     Open
   </button>
     </div>

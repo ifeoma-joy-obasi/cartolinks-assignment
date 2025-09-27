@@ -134,7 +134,7 @@ const {theme, setTheme}=useTheme()
           <button
                   onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
                   
-                  className="group p-2 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 cursor-pointer transition-colors duration-300 relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100 "
+                  className="group p-2 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 cursor-pointer transition-colors duration-300 relative flex aspect-square h-11 items-center justify-center rounded-[10px] opacity-100 shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none"
                 >
                  {theme === 'light' ? <SunIcon className="group-hover:scale-110 group-active:scale-110"/>:<MoonIcon className='dark:text-gray-200 dark:group-hover:text-white transition-colors duration-300 group-hover:scale-110 group-active:scale-110'/> }
                 </button>
@@ -169,7 +169,7 @@ const {theme, setTheme}=useTheme()
 </div>
 <p>Upgrade</p>
 </div>
-<button className="cursor-pointer bg-blue-600 ml-auto flex h-9 w-22 items-center justify-center rounded-full text-xs font-medium text-white">Get Pro</button>
+<button className="cursor-pointer bg-blue-600 ml-auto flex h-9 w-22 items-center justify-center rounded-full text-xs font-medium text-white shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Get Pro</button>
 </div>
 
 <div className="flex item-center justify-between cursor-pointer">
@@ -181,7 +181,7 @@ const {theme, setTheme}=useTheme()
       </div>
 <p>Profile</p>
     </div>
-    <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+    <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
     </div>
 
     <div className="flex items-center justify-between cursor-pointer">
@@ -234,7 +234,7 @@ const {theme, setTheme}=useTheme()
       </div>
       <p>Image</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -256,7 +256,7 @@ const {theme, setTheme}=useTheme()
       </div>
       <p>Video</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -272,7 +272,7 @@ const {theme, setTheme}=useTheme()
       </div>
       <p>Realtime</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -290,7 +290,7 @@ const {theme, setTheme}=useTheme()
 
       <p>Enhancer</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -306,7 +306,7 @@ const {theme, setTheme}=useTheme()
      </div>
       <p>Video Lipsync</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -322,7 +322,7 @@ const {theme, setTheme}=useTheme()
      </div>
       <p>Motion Transfer</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 {/* item 7*/}
@@ -388,7 +388,7 @@ const {theme, setTheme}=useTheme()
 
       <p>Train</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -400,7 +400,7 @@ const {theme, setTheme}=useTheme()
      </div>
       <p>3D Objects</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 
@@ -411,7 +411,7 @@ const {theme, setTheme}=useTheme()
      <svg width="44" height="44" viewBox="0 0 46 46" fill="none" className="block shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M5.16699 9.41601C5.16699 8.31144 6.06242 7.41602 7.16699 7.41602H16.7125C17.4968 7.41602 18.2087 7.87442 18.5332 8.58841L19.3008 10.277C19.6253 10.9909 20.3372 11.4493 21.1215 11.4493H39.8337C40.9382 11.4493 41.8337 12.3448 41.8337 13.4493V25.5827C41.8337 26.6873 40.9382 27.5827 39.8337 27.5827H7.16699C6.06243 27.5827 5.16699 26.6873 5.16699 25.5827V9.41601Z" fill="#2B93BF"></path><rect x="5.16699" y="13.2598" width="36.6667" height="25.3229" rx="2" fill="#3AC4FF"></rect><path d="M5.28147 36.2445C5.17675 35.6966 5.16776 34.9794 5.16699 33.907H41.8335C41.8327 34.9794 41.8238 35.6966 41.719 36.2445H5.28147Z" fill="black" fillOpacity="0.05"></path><path d="M9.76801 38.5841H37.2321C38.8427 38.5841 39.648 38.5841 40.2631 38.2444C40.8043 37.9456 41.2442 37.4688 41.5199 36.8824C41.6093 36.6923 41.6731 36.4855 41.7188 36.2466H5.28125C5.32692 36.4855 5.3908 36.6923 5.48014 36.8824C5.75586 37.4688 6.1958 37.9456 6.73692 38.2444C7.35209 38.5841 8.1574 38.5841 9.76801 38.5841Z" fill="black" fillOpacity="0.1"></path></svg>
       <p>Assets</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 {/* item 10 */}
@@ -422,7 +422,7 @@ const {theme, setTheme}=useTheme()
      </div>
       <p>Chat</p>
       </div>
-      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+      <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">Open</button>
 </div>
 
 

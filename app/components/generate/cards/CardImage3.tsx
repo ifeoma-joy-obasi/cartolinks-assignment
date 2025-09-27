@@ -16,11 +16,11 @@ export default React.memo(function CardImage3() {
         <div className="flex items-center gap-3">
           <h3 className="font-medium text-sm">Realtime</h3>
         </div>
-        <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 cursor-pointer">Realtime AI rendering on a canvas. Instant feedback loops.</p>
+        <p className="text-sm text-gray-500 dark:text-zinc-500 dark:hover:text-zinc-400 dark:active:text-zinc-400 cursor-pointer">Realtime AI rendering on a canvas. Instant feedback loops.</p>
       </div>
 
      {/* Open button (fixed size) */}
-  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0">
+  <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full h-9 w-15 text-xs font-medium shrink-0 focus-within:outline-none focus-visible:outline-none focus:outline-none">
     Open
   </button>
     </div>
