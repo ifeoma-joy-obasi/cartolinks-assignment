@@ -54,15 +54,14 @@ export default function LogoUser(): JSX.Element {
 
     <div className="flex items-center gap-8 cursor-pointer">
 
-      {/* Trigger */}
+  {/* Trigger */}
  <button
   onClick={toggle}
   aria-expanded={open}
   aria-haspopup="menu"
   aria-controls="profile-dropdown"
-  className={`flex items-center gap-3 transition cursor-pointer focus:outline-none 
-    dark:brightness-70 hover:brightness-100 active:brightness-110 
-    ${open ? "brightness-100" : ""}`}
+  className={`flex items-center gap-3 transition cursor-pointer focus:outline-none `}
+    
 >
   {/* chevron */}
   <ChevronDownIcon
@@ -72,7 +71,7 @@ export default function LogoUser(): JSX.Element {
   />
 
   {/* User Gradient Circle */}
-  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 transition">
+  <div className="p-[2px] rounded-xl bg-gray-100 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition">
     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
   </div>
 

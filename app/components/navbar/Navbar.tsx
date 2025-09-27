@@ -180,21 +180,21 @@ const {theme, setTheme}=useTheme()
         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 via-blue-300 to-blue-100" />
       </div>
 <p>Profile</p>
-</div>
-<button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
-</div>
+    </div>
+    <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+    </div>
 
-<div className="flex items-center justify-between cursor-pointer">
-  <div className="flex items-center gap-3 ">
-<div className="bg-opacity-15 bg-gray-100 dark:bg-zinc-800 relative aspect-square h-11 rounded-[10px] opacity-100">
-  <SettingsIcon className="absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110 dark:text-white"/>
-</div>
-<p>Settings</p>
-</div>
-<button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
-</div>
+    <div className="flex items-center justify-between cursor-pointer">
+      <div className="flex items-center gap-3 ">
+    <div className="bg-opacity-15 bg-gray-100 dark:bg-zinc-800 relative aspect-square h-11 rounded-[10px] opacity-100">
+      <SettingsIcon className="absolute inset-0 m-auto h-5 w-5 fill-current transition-transform duration-200 ease-out group-hover:scale-110 group-active:scale-110 dark:text-white"/>
+    </div>
+    <p>Settings</p>
+    </div>
+    <button className="cursor-pointer bg-gray-100 dark:bg-zinc-800 text-black dark:text-white rounded-full ml-auto flex h-9 w-22 items-center justify-center text-xs font-medium">Open</button>
+    </div>
 
-</div>
+  </div>
 
 
 {/* collapsible section toggle.*/}

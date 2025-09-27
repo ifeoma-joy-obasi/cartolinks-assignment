@@ -45,7 +45,7 @@ export default function GenerateSection({
           onClick={() => setOpen((v) => !v)}
           className={`cursor-pointer inline-flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition
             focus:outline-none 
-            ${open ? "text-sky-600" : "text-gray-700 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-zinc-700 dark:text-gray-200"}`}
+            ${open ? "text-sky-600" : "text-gray-700 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-zinc-700 dark:active:bg-zinc-700 dark:text-gray-200"}`}
         >
           <ChevronDownIcon
             className={`w-4 h-4 transform transition-transform duration-200 ${open ? "rotate-0" : "rotate-180"}`}

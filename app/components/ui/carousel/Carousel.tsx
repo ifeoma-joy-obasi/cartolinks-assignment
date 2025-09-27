@@ -78,7 +78,7 @@ const prev = () => {
  
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
       {/* scroll container */}
       <div
         ref={containerRef}
@@ -137,7 +137,7 @@ const prev = () => {
       </div>
 
       {/* dots */}
-      <div className="mt-3 flex gap-2 absolute left-18 md:left-80 lg:left-110 xl:left-160">
+      <div className="mt-3 flex gap-2 absolute left-14  md:left-75 lg:left-110 xl:left-160 ">
         {IMAGES.map((_, idx) => (
           <button
             key={idx}
