@@ -6,15 +6,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const IMAGES = [
-  { id: 1, src: "https://s.krea.ai/announce-wan-2-2-image.webp" },
-  { id: 2, src: "https://s.krea.ai/OSSKreaFlux1_poster.webp" },
-  { id: 3, src: "https://s.krea.ai/realtime-video-poster.webp" },
-  { id: 4, src: "https://s.krea.ai/rt-video-beta-announcement.webp" },
-  { id: 5, src: "https://s.krea.ai/quick-action-remove-object.webp" },
-  { id: 6, src: "https://s.krea.ai/quick-action-change-haircut.webp" },
-  { id: 7, src: "https://s.krea.ai/quick-action-change-lighting.webp" },
-  { id: 8, src: "https://s.krea.ai/a_close-up_portrait_of_a_whimsical_dinosaur_made_entirely_of_knitted_yarn_in_shades_of_pink_white_a_1tvns5kbqfc05dc8e6wl_3.webp" },
-  { id: 9, src: "https://s.krea.ai/e06d7a87-e1de-4910-9083-7be5986b45f0_512.webp" },
+  { id: 1, src: "/images/carousel-img-one.webp" },
+  { id: 2, src: "/images/carousel-img-two.webp" },
+  { id: 3, src: "/images/carousel-img-three.webp" },
+  { id: 4, src: "/images/carousel-img-four.webp" },
+  { id: 5, src: "/images/carousel-img-five.webp" },
+  { id: 6, src: "/images/carousel-img-six.webp" },
+  { id: 7, src: "/images/carousel-img-seven.webp" },
+  { id: 8, src: "/images/carousel-img-eight.webp" },
+  { id: 9, src: "/images/carousel-img-nine.webp" },
 ];
 
 export default function Carousel() {
@@ -87,30 +87,76 @@ const prev = () => {
       >
         {IMAGES.map((img, i) => (
           
+    <motion.div
+      key={img.id}
+      ref={i === 0 ? firstSlideRef : undefined}
+      className="flex-shrink-0 snap-start rounded-2xl overflow-hidden w-[90%] sm:w-[70%] md:w-[60%]"
+      initial={{ opacity: 1, scale: 1 }}
+      animate={
+        i === current && direction
+          ? { scale: 1.05, opacity: 1 }
+          : { scale: 1, opacity: 1 }
+      }
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      onAnimationComplete={() => setDirection(null)}
+    >
+      {/* make this relative so absolute children + overlay stay inside */}
+<div className="relative w-full h-[240px] sm:h-[360px] md:h-[480px]">
+  <Image
+    src={img.src}
+    alt={`Slide ${i + 1}`}
+    fill
+    className="object-cover"
+    draggable={false}
+  />
 
-          <motion.div
-            key={img.id}
-            ref={i === 0 ? firstSlideRef : undefined}
-            className="flex-shrink-0 snap-start rounded-2xl overflow-hidden"
-            style={{ width: "60%" }}
-            initial={{ opacity: 1, scale: 1 }}
-            animate={
-              i === current && direction
-                ? { scale: 1.05, opacity: 1 }
-                : { scale: 1, opacity: 1 }
-            }
-            transition={{ duration: 0.35, ease: "easeOut" }}
-            onAnimationComplete={() => setDirection(null)} // reset after anim
-          >
-          <Image
-            src={img.src}
-            alt={`Slide ${i + 1}`}
-            width={1280}
-            height={480}
-            className="w-full h-[480px] object-cover "
-            draggable={false}
-          />
-        </motion.div>
+  {/* ADJUSTMENT 1: subtle dark overlay */}
+  <div className="absolute inset-0 bg-black/22"></div>
+
+  {/* text overlay ONLY for first image */}
+  {i === 0 && (
+    <div>
+      <h3 className="absolute cursor-pointer top-4 left-4 right-4 lg:top-8 lg:left-8 lg:right-8 text-white/75 text-[12px] lg:text-sm">
+        NEW IMAGE MODEL
+      </h3>
+
+  <div className="absolute bottom-4 left-4 right-4 lg:bottom-8 lg:left-8 lg:right-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3">
+  <div className="sm:max-w-[65%] md:max-w-[60%] lg:max-w-[55%]">
+    <h2 className="cursor-pointer text-white text-sm sm:text-lg md:text-2xl font-semibold drop-shadow-md mb-1">
+      WAN 2.2 Image generation
+    </h2>
+    <p className="cursor-pointer text-white text-[11px] sm:text-[12px] md:text-sm opacity-80 drop-shadow-sm line-clamp-2 md:line-clamp-none">
+      Generate complex images with the brand new and powerful WAN 2.2 model.
+      Exceptional prompt adherence and ultra-realistic textures.
+    </p>
+  </div>
+
+  <button className="w-[95px] sm:w-[115px] md:w-[130px] px-4 py-2.5 cursor-pointer bg-white text-gray-900 rounded-full text-[11px] sm:text-sm font-medium hover:scale-95 active:scale-95 transition focus:outline-none">
+    Try WAN 2.2
+  </button>
+</div>
+
+    </div>
+  )}
+
+
+
+    {/* text overlay ONLY for second image */}
+    {i === 1 && (
+    <div>
+         <h3 className="absolute cursor-pointer top-4 left-4 right-4 lg:top-8 lg:left-8 lg:right-8  text-white/75 text-[12px] lg:text-sm">OPEN SOURCE MODEL</h3>
+      <div className="absolute bottom-6 left-6 right-6 text-white max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[55%]">
+        <h2 className="cursor-pointer text-white text-xl md:text-2xl font-semibold drop-shadow-md mb-1">FLUX.1 Krea</h2>
+      <p className="cursor-pointer text-white text-[11px] sm:text-[12px] md:text-sm opacity-85 drop-shadow-sm line-clamp-2 md:line-clamp-none">
+        We&apos;re making the weights to our FLUX.1 Krea model open source.
+        Download and run our model weights. Read the technical report, or 
+        generate with it in Krea Image.
+        </p>
+      </div>
+      </div>
+    )}
+  </div>
+</motion.div>
 
 
         ))}
@@ -121,7 +167,7 @@ const prev = () => {
         <button
           onClick={prev}
           aria-label="Previous"
-          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:outline-none"
           disabled={current === 0}
         >
           <CheveronLeftIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
@@ -129,7 +175,7 @@ const prev = () => {
         <button
           onClick={next}
           aria-label="Next"
-          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:outline-none"
           disabled={current >= IMAGES.length - 1}
         >
           <CheveronRightIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />

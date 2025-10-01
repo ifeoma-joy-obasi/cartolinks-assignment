@@ -3,7 +3,7 @@
 import React, { useId, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
+import Image from "next/image";
 
 type Item = {
   id: string | number;
@@ -75,7 +75,7 @@ export default function GenerateSection({
                 ) : (
                   <div className="rounded-2xl p-4 bg-white/80 dark:bg-gray-800 shadow-sm">
                     {item.image ? (
-                      <img src={item.image} alt={item.title ?? ""} className="w-full h-40 object-cover rounded-md mb-3" />
+                      <Image src={item.image} alt={item.title ?? ""} className="w-full h-40 object-cover rounded-md mb-3" />
                     ) : null}
                     <div>
                       <div className="text-sm font-medium">{item.title ?? "Untitled"}</div>
