@@ -77,7 +77,7 @@ const {theme, setTheme}=useTheme()
         </path>
     
       </svg>
-</button>
+        </button>
 
 
       <div className="hidden lg:flex">
@@ -129,7 +129,10 @@ const {theme, setTheme}=useTheme()
      <div className="px-4 py-6 grid place-items-start ">
 
       {/* light mode and dark mode on mobile sidebar */}
-         <div className="flex items-center gap-3 mb-4 ">
+         <div 
+         onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
+         className="flex items-center gap-3 mb-4 "
+         >
           {/* theme button */}
           <button
                   onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
@@ -139,7 +142,7 @@ const {theme, setTheme}=useTheme()
                  {theme === 'light' ? <SunIcon className="group-hover:scale-110 group-active:scale-110"/>:<MoonIcon className='dark:text-gray-200 dark:group-hover:text-white transition-colors duration-300 group-hover:scale-110 group-active:scale-110'/> }
                 </button>
           
-            <p className="text-black dark:text-white">Theme</p>
+            <p className="text-black dark:text-white cursor-pointer">Theme</p>
          </div>
         
         <Link href='/' className="flex items-center gap-3">
