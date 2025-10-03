@@ -22,6 +22,7 @@ import { TbSettingsFilled as RoundSettingsIcon} from "react-icons/tb";
 import { LuLogOut as LogOutIcon} from "react-icons/lu";
 import { FaHandsHelping as HandsIcon} from "react-icons/fa";
 import { IoMdAddCircleOutline as AddCircleIcon} from "react-icons/io";
+import { ChevronDownIcon  } from "@heroicons/react/24/solid";
 // hero icon
 export {
     VideoCameraIcon,
@@ -47,5 +48,6 @@ export{
     RoundSettingsIcon,
     LogOutIcon,
     HandsIcon,
-    AddCircleIcon
+    AddCircleIcon,
+    ChevronDownIcon,
 }

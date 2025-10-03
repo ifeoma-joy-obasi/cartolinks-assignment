@@ -2,9 +2,8 @@
 
 import React, { JSX, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion } from "framer-motion";
-import { AddCircleIcon  } from "../../../assets/index";
+import { AddCircleIcon,ChevronDownIcon  } from "../../../assets/index";
 
 
 type MenuItem = { label: string; href?: string; onClick?: () => void; Icon?: React.ElementType };
