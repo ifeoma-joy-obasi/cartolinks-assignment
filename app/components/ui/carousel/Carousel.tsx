@@ -167,7 +167,7 @@ const prev = () => {
         <button
           onClick={prev}
           aria-label="Previous"
-          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:outline-none"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:"
           disabled={current === 0}
         >
           <CheveronLeftIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
@@ -175,7 +175,7 @@ const prev = () => {
         <button
           onClick={next}
           aria-label="Next"
-          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:outline-none"
+          className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-full shadow hover:scale-95 transition disabled:opacity-40 focus-outline-none focus-within:outline-none focus-visible:"
           disabled={current >= IMAGES.length - 1}
         >
           <CheveronRightIcon className="cursor-pointer w-4 h-4 text-gray-700 dark:text-gray-100" />
